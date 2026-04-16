@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary - The Trading Dictionary</title>
+
+</head>
+<body>
+    <div class="site">
+        
+  <nav>
+    <div class="logo">The Trading<br>Dictionary</div>
+    <div class="search-bar">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#888" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input placeholder="Search terms...">
+    </div>
+    <div style="width:1px;height:20px;background:#e0e0e0"></div>
+    <div class="nav-links">
+      <a href="index.html"><button id="nav-home">Home</button></a>
+      <a href="dictionary.html"><button id="nav-dictionary" class="active">Dictionary</button></a>
+      <a href="educationhub.html"><button id="nav-education">Education Hub</button></a>
+      <a href="trends.html"><button id="nav-trends">Trends</button></a>
+      <a href="about.html"><button id="nav-about">About</button></a>
+      <a href="contact.html"><button id="nav-contact">Contact</button></a>
+    </div>
+  </nav>
+
+        <div class="page">
+            <div class="dict-header">
+      <h2>The Trading Dictionary</h2>
+      <p>Browse and search financial terms, definitions, and concepts.</p>
+      <div class="dict-search">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#888" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <input placeholder="Search terms..." id="dict-input" oninput="filterDict()">
+      </div>
+    </div>
+    <div class="alpha-row">
+      <span class="alpha-btn" onclick="filterAlpha('A',this)">A</span>
+      <span class="alpha-btn" onclick="filterAlpha('B',this)">B</span>
+      <span class="alpha-btn" onclick="filterAlpha('C',this)">C</span>
+      <span class="alpha-btn" onclick="filterAlpha('D',this)">D</span>
+      <span class="alpha-btn" onclick="filterAlpha('E',this)">E</span>
+      <span class="alpha-btn" onclick="filterAlpha('F',this)">F</span>
+      <span class="alpha-btn" onclick="filterAlpha('G',this)">G</span>
+      <span class="alpha-btn" onclick="filterAlpha('H',this)">H</span>
+      <span class="alpha-btn" onclick="filterAlpha('I',this)">I</span>
+      <span class="alpha-btn" onclick="filterAlpha('L',this)">L</span>
+      <span class="alpha-btn" onclick="filterAlpha('M',this)">M</span>
+      <span class="alpha-btn" onclick="filterAlpha('O',this)">O</span>
+      <span class="alpha-btn" onclick="filterAlpha('P',this)">P</span>
+      <span class="alpha-btn" onclick="filterAlpha('R',this)">R</span>
+      <span class="alpha-btn" onclick="filterAlpha('S',this)">S</span>
+      <span class="alpha-btn" onclick="filterAlpha('V',this)">V</span>
+    </div>
+    <div class="cat-filter">
+      <span class="cat-pill active" onclick="filterCat('all',this)">All</span>
+      <span class="cat-pill" onclick="filterCat('Technical Analysis',this)">Technical Analysis</span>
+      <span class="cat-pill" onclick="filterCat('Indicators',this)">Indicators</span>
+      <span class="cat-pill" onclick="filterCat('Risk Management',this)">Risk Management</span>
+      <span class="cat-pill" onclick="filterCat('Market Trends',this)">Market Trends</span>
+      <span class="cat-pill" onclick="filterCat('Strategies',this)">Strategies</span>
+      <span class="cat-pill" onclick="filterCat('Derivatives',this)">Derivatives</span>
+    </div>
+    <div class="dict-grid" id="dict-grid"></div>
+
+        </div>
+        <footer>
+            <span>The Trading Dictionary</span>
+            <span>Disclaimer: For educational purposes only.</span>
+            <span>© 2025</span>
+        </footer>
+    </div>
+    <script>
+  const terms = [
+    {term:"Bull Market",cat:"Market Trends",def:"A market in which prices are rising or are expected to rise, encouraging buying."},
+    {term:"Bear Market",cat:"Market Trends",def:"A market experiencing prolonged price declines, typically 20% or more from recent highs."},
+    {term:"Arbitrage",cat:"Strategies",def:"Simultaneous purchase and sale of an asset in different markets to profit from price differences."},
+    {term:"Candlestick",cat:"Technical Analysis",def:"A chart element showing the open, close, high, and low price of an asset in a given period."},
+    {term:"Divergence",cat:"Indicators",def:"When price moves in the opposite direction of a technical indicator, signalling a potential reversal."},
+    {term:"EMA",cat:"Technical Analysis",def:"Exponential Moving Average — gives more weight to recent prices than a simple moving average."},
+    {term:"Fibonacci Retracement",cat:"Technical Analysis",def:"Horizontal lines indicating possible support and resistance levels based on the Fibonacci sequence."},
+    {term:"Gap",cat:"Technical Analysis",def:"A break in continuity on a price chart where no trading occurred between two sessions."},
+    {term:"Hedging",cat:"Risk Management",def:"An investment made to reduce the risk of adverse price movements in an asset."},
+    {term:"IPO",cat:"Market Trends",def:"Initial Public Offering — the first sale of a company's shares to the public."},
+    {term:"Leverage",cat:"Risk Management",def:"Using borrowed capital to increase the potential return of an investment."},
+    {term:"Margin",cat:"Risk Management",def:"The collateral that an investor must deposit to cover the credit risk to a broker."},
+    {term:"Options",cat:"Derivatives",def:"Contracts giving the holder the right, but not obligation, to buy or sell an asset at a set price."},
+    {term:"Pivot Point",cat:"Technical Analysis",def:"A price level used to determine potential support and resistance in the market."},
+    {term:"RSI",cat:"Indicators",def:"Relative Strength Index — measures the magnitude of recent price changes to evaluate overbought or oversold conditions."},
+    {term:"Stop Loss",cat:"Risk Management",def:"An order placed to sell a security when it reaches a specific price, limiting potential loss."},
+    {term:"Volatility",cat:"Indicators",def:"A statistical measure of the dispersion of returns. High volatility means larger price swings."},
+  ];
+
+  let currentAlpha = null;
+  let currentCat = 'all';
+
+  function renderDict() {
+    const input = document.getElementById('dict-input');
+    if (!input) return;
+    const q = input.value.toLowerCase();
+    const grid = document.getElementById('dict-grid');
+    const filtered = terms.filter(t => {
+      const matchQ = !q || t.term.toLowerCase().includes(q) || t.def.toLowerCase().includes(q);
+      const matchA = !currentAlpha || t.term.toUpperCase().startsWith(currentAlpha);
+      const matchC = currentCat === 'all' || t.cat === currentCat;
+      return matchQ && matchA && matchC;
+    });
+    grid.innerHTML = filtered.length > 0
+      ? filtered.map(t => `
+          <div class="def-card">
+            <div class="cat-badge">${t.cat}</div>
+            <div class="term">${t.term}</div>
+            <div class="def-text">${t.def}</div>
+          </div>`).join('')
+      : '<p style="color:#999;font-size:13px;padding:8px">No terms found.</p>';
+  }
+
+  function filterDict() { renderDict(); }
+
+  function filterAlpha(l, el) {
+    document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+    if (currentAlpha === l) {
+      currentAlpha = null;
+    } else {
+      currentAlpha = l;
+      el.classList.add('active');
+    }
+    renderDict();
+  }
+
+  function filterCat(c, el) {
+    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    el.classList.add('active');
+    currentCat = c;
+    renderDict();
+  }
+  
+  // Initial render for dictionary page
+  window.onload = renderDict;
+</script>
+
+<button class="access-btn" onclick="toggleContrast()">🌓 High Contrast</button><script>
+function toggleContrast() {
+    document.body.classList.toggle('high-contrast');
+    const isHigh = document.body.classList.contains('high-contrast');
+    localStorage.setItem('high-contrast', isHigh);
+}
+
+// Check for preference on load
+window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('high-contrast') === 'true') {
+        document.body.classList.add('high-contrast');
+    }
+});
+</script></body>
+</html>

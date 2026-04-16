@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Hub - The Trading Dictionary</title>
+</head>
+<body>
+    <div class="site">
+        <nav>
+            <div class="logo">The Trading<br>Dictionary</div>
+            <div class="search-bar">
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#888" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <input placeholder="Search terms...">
+            </div>
+            <div style="width:1px;height:20px;background:#e0e0e0"></div>
+            <div class="nav-links">
+                <a href="index.html"><button id="nav-home">Home</button></a>
+                <a href="dictionary.html"><button id="nav-dictionary">Dictionary</button></a>
+                <a href="educationhub.html"><button id="nav-education" class="active">Education Hub</button></a>
+                <a href="trends.html"><button id="nav-trends">Trends</button></a>
+                <a href="about.html"><button id="nav-about">About</button></a>
+                <a href="contact.html"><button id="nav-contact">Contact</button></a>
+            </div>
+        </nav>
+
+        <div class="page">
+        <div class="edu-header">
+        <h2>Education Hub</h2>
+        <p>Expand your knowldge on the different tools used to enhance market analysis, interpretation and influence decision-making.</p>
+        </div>
+
+        <div style="padding:20px  32px 0;border-bottom:1px solid #e0e0e0">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <span style="font-size:13px;font-weight:600">Chart indicators</span>
+        <div style="display:flex;gap:4px">
+          <span class="alpha-btn active" style="width:22px;height:22px;font-size:11px">A</span>
+          <span class="alpha-btn" style="width:22px;height:22px;font-size:11px">B</span>
+          <span class="alpha-btn" style="width:22px;height:22px;font-size:11px">M</span>
+          <span class="alpha-btn" style="width:22px;height:22px;font-size:11px">R</span>
+          <span class="alpha-btn" style="width:22px;height:22px;font-size:11px">V</span>
+          <span class="alpha-btn" style="width:22px;height:22px;font-size:11px">Z</span>
+        </div>
+        </div>
+
+        <div class="indicator-charts">
+            <div>
+                <div class="ind-name">RSI</div>
+                <div class="ind-desc">Momentum oscillator</div>
+            </div>
+            <div class="chart-area">
+                <svg viewBox=" 0 0 300 80" height="70" width="100%" preserveAspectRatio="none">
+                    <line x1="0" y1="50" x2="300" y2="50" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,2"/>
+            <line x1="0" y1="25" x2="300" y2="25" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4"/>
+            <polyline points="0,60 40,55 80, 35 120,20 160, 30 200, 50 240, 45 280, 30 300, 35" fill="none" stroke="#185FA5" stroke-width="2"/>
+                </svg>
+
+            </div>
+
+            </div>
+ 
+            <div class="indicator-charts">
+                <div>
+                <div class="ind-name">MACD</div>
+                <div class="ind-desc">Trend-following momentum indicator</div>
+                </div>
+                <div class="chart-area">
+                    <svg viewBox=" 0 0 300 80" height="70" width="100%" preserveAspectRatio="none">
+                        <line x1="0" y1="50" x2="300" y2="50" stroke="#e0e0e0" stroke-width="1"/>
+                                            <polyline points="0,40 40,30 80, 25 120,35 160, 45 200, 38 240, 28 280, 22 300, 30" fill="none" stroke="#1D9E75" stroke-width="2"/>
+                                            <polyline points="0,40 40,43 80, 48 120,42 160, 36 200, 40 240, 44 280, 38 300, 36" fill="none" stroke="#D85A30" stroke-width="1.5" stroke-dasharray="4"/> 
+
+                    </svg>
+                </div>
+            </div>
+
+    <div class="indicator-chart">
+        <div>
+            <div class="ind-name">Bollinger Bands</div>
+            <div class="ind-desc">Volatility indicator</div>
+            </div>
+            <div class="chart-area">
+                <svg viewBox=" 0 0 300 80" height="70" width="100%" preserveAspectRatio="none">
+                   <polyline points="0,20 50,18 100,22 150,16 200,24 250,14 300,20" fill="none" stroke="#e0e0e0" stroke-width="1.5"/>
+            <polyline points="0,40 50,38 100,42 150,38 200,44 250,36 300,40" fill="none" stroke="#185FA5" stroke-width="2"/>
+            <polyline points="0,60 50,62 100,58 150,64 200,56 250,62 300,60" fill="none" stroke="#e0e0e0" stroke-width="1.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div style="padding:16px 32px 4px">
+      <div class="section-label">Indicator descriptions</div>
+    </div>
+    <div class="edu-desc-list">
+      <div class="edu-desc-card"><div class="ed-title">RSI — Relative Strength Index</div><div class="ed-body">Measures the speed and magnitude of price movements. Values above 70 indicate overbought conditions; below 30 indicates oversold.</div></div>
+      <div class="edu-desc-card"><div class="ed-title">MACD — Moving Avg Convergence/Divergence</div><div class="ed-body">Shows the relationship between two exponential moving averages. Used to identify trend direction, reversals, and momentum.</div></div>
+      <div class="edu-desc-card"><div class="ed-title">Bollinger Bands</div><div class="ed-body">Volatility bands placed above and below a moving average. When bands tighten, volatility is low; when they widen, volatility is rising.</div></div>
+      <div class="edu-desc-card"><div class="ed-title">Volume Weighted Average Price (VWAP)</div><div class="ed-body">Gives the average price an asset has traded at throughout the day, weighted by volume — useful for benchmarking trade execution.</div></div>
+    </div>
+
+        </div>
+        
+    <footer>
+      <span>The Trading Dictionary</span>
+      <span>Disclaimer: For educational purposes only.</span>
+      <span>© 2025</span>
+    </footer>
+
+    </div>
+    <script>
+        const terms= [{term:"Arbitrage",cat:"Strategies",def:"Simultaneous purchase and sale of an asset in different markets to profit from price differences."},
+    {term:"Bull Market",cat:"Market Trends",def:"A market in which prices are rising or are expected to rise, encouraging buying."},
+    {term:"Bear Market",cat:"Market Trends",def:"A market experiencing prolonged price declines, typically 20% or more from recent highs."},
+    {term:"Candlestick",cat:"Technical Analysis",def:"A chart element showing the open, close, high, and low price of an asset in a given period."},
+    {term:"Divergence",cat:"Indicators",def:"When price moves in the opposite direction of a technical indicator, signalling a potential reversal."},
+    {term:"EMA",cat:"Technical Analysis",def:"Exponential Moving Average — gives more weight to recent prices than a simple moving average."},
+    {term:"Fibonacci Retracement",cat:"Technical Analysis",def:"Horizontal lines indicating possible support and resistance levels based on the Fibonacci sequence."},
+    {term:"Gap",cat:"Technical Analysis",def:"A break in continuity on a price chart where no trading occurred between two sessions."},
+    {term:"Hedging",cat:"Risk Management",def:"An investment made to reduce the risk of adverse price movements in an asset."},
+    {term:"IPO",cat:"Market Trends",def:"Initial Public Offering — the first sale of a company's shares to the public."},
+    {term:"Leverage",cat:"Risk Management",def:"Using borrowed capital to increase the potential return of an investment."},
+    {term:"Margin",cat:"Risk Management",def:"The collateral that an investor must deposit to cover the credit risk to a broker."},
+    {term:"Options",cat:"Derivatives",def:"Contracts giving the holder the right, but not obligation, to buy or sell an asset at a set price."},
+    {term:"Pivot Point",cat:"Technical Analysis",def:"A price level used to determine potential support and resistance in the market."},
+    {term:"RSI",cat:"Indicators",def:"Relative Strength Index — measures the magnitude of recent price changes to evaluate overbought or oversold conditions."},
+    {term:"Stop Loss",cat:"Risk Management",def:"An order placed to sell a security when it reaches a specific price, limiting potential loss."},
+    {term:"Volatility",cat:"Indicators",def:"A statistical measure of the dispersion of returns. High volatility means larger price swings."},
+  ];
+
+  let currentAlpha = null;
+let currentCat = 'all';
+function renderDict() {
+    const input = document.getElementById('dict-input');
+    if (!input) return;
+    const q = input.value.toLowerCase();
+    const grid = document.getElementById('dict-grid');
+    const filtered = terms.filter(t => {
+      const matchQ = !q || t.term.toLowerCase().includes(q) || t.def.toLowerCase().includes(q);
+      const matchA = !currentAlpha || t.term.toUpperCase().startsWith(currentAlpha);
+      const matchC = currentCat === 'all' || t.cat === currentCat;
+      return matchQ && matchA && matchC;
+    });
+    grid.innerHTML = filtered.length > 0
+      ? filtered.map(t => `
+          <div class="def-card">
+            <div class="cat-badge">${t.cat}</div>
+            <div class="term">${t.term}</div>
+            <div class="def-text">${t.def}</div>
+          </div>`).join('')
+      : '<p style="color:#999;font-size:13px;padding:8px">No terms found.</p>';
+  }
+
+  function filterDict() { renderDict(); }
+
+  function filterAlpha(l, el) {
+    document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+    if (currentAlpha === l) {
+      currentAlpha = null;
+    } else {
+      currentAlpha = l;
+      el.classList.add('active');
+    }
+    renderDict();
+  }
+
+  function filterCat(c, el) {
+    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    el.classList.add('active');
+    currentCat = c;
+    renderDict();
+  }
+  
+  // Initial render for dictionary page
+  window.onload = renderDict;
+</script>
+
+<button class="access-btn" onclick="toggleContrast()">🌓 High Contrast</button><script>
+function toggleContrast() {
+    document.body.classList.toggle('high-contrast');
+    const isHigh = document.body.classList.contains('high-contrast');
+    localStorage.setItem('high-contrast', isHigh);
+}
+
+// Check for preference on load
+window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('high-contrast') === 'true') {
+        document.body.classList.add('high-contrast');
+    }
+});
+</script>
+
+        
+      
+                    
+</body>
+</html>
+
+    

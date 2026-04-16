@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trends - The Trading Dictionary</title>
+
+</head>
+<body>
+    <div class="site">  
+        <nav>
+    <div class="logo">The Trading<br>Dictionary</div>
+    <div class="search-bar">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#888" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <input placeholder="Search terms...">
+    </div>
+    <div style="width:1px;height:20px;background:#e0e0e0"></div>
+    <div class="nav-links">
+        <a href="index.html"><button id="nav-home">Home</button></a>
+        <a href="dictionary.html"><button id="nav-dictionary">Dictionary</button></a>
+        <a href="educationhub.html"><button id="nav-education">Education Hub</button></a>
+        <a href="trends.html"><button id="nav-trends" class="active">Trends</button></a>
+        <a href="about.html"><button id="nav-about">About</button></a>
+        <a href="contact.html"><button id="nav-contact">Contact</button></a> 
+    </div>
+</nav>
+
+<div class="page">
+
+    <div class="trends-header"> 
+        <h2>Market Trends</h2>
+        <p>Identify bullish, bearish and consolidating / neutral market patterns.</p>
+
+    </div>
+
+    <div class="trend-cards">
+    <div class="trend-card trend-bullish">
+        <div class="tc-label">⇑Bullish</div>
+        <div class="tc-title">Upward movement</div>
+        <div class="tc-body">Prices are consistently fluctuating in an upward direction. Buyers outweigh sellers creating higher highs and higher lows.</div>
+    </div>
+    <div class="trend-card trend-bearish">
+        <div class="tc-label">⇓Bearish</div>
+        <div class="tc-title">Downward movement</div>
+        <div class="tc-body">Prices are consistently fluctuating in a downward direction. Sellers outweigh buyers creating lower highs and lower lows.</div>
+    </div>
+    <div class="trend-card trend-consolidating">
+        <div class="tc-label">⇔Consolidating</div>
+        <div class="tc-title">Sideways movement</div>
+        <div class="tc-body">Prices are fluctuating within a relatively narrow range, indicating a period of indecision between buyers and sellers.</div>
+    </div>
+    </div>
+        
+    <div class="trend-chart-section">
+        <div class="section-label" style="margin-bottom: 16px;"> Market Trend Example</div>
+        <div class="trend-chart-box">
+            <div class="tch-title">Bullish trend - higher highs and higher lows</div>
+            <div class="tch-sub">Characteristic upward price progression consistently</div>
+            <svg viewBox="0 0 600 120" width="100%" height="110">
+                <line x1="0" y1="100" x2="600" y2="100" stroke="#e0e0e0" stroke-width="0.5"/>
+          <line x1="0" y1="70" x2="600" y2="70" stroke="#e0e0e0" stroke-width="0.5" stroke-dasharray="4"/>
+          <line x1="0" y1="40" x2="600" y2="40" stroke="#e0e0e0" stroke-width="0.5" stroke-dasharray="4"/>
+          <polyline points="0,95 60,80 120,85 180,65 240,70 300,50 360,55 420,35 480,40 540,22 600,18"
+            fill="none" stroke="#1D9E75" stroke-width="2.5" stroke-linejoin="round"/>
+
+            <!---support line--->
+            <line x1="0" y1="95" x2="600" y2="25" stroke="#1D9E75" stroke-width="1" stroke-dasharray="6" opacity="0.5"/>
+          <text x="8" y="115" fill="#999" font-size="10" font-family="system-ui">Jan</text>
+          <text x="110" y="115" fill="#999" font-size="10" font-family="system-ui">Mar</text>
+          <text x="220" y="115" fill="#999" font-size="10" font-family="system-ui">May</text>
+          <text x="330" y="115" fill="#999" font-size="10" font-family="system-ui">Jul</text>
+          <text x="440" y="115" fill="#999" font-size="10" font-family="system-ui">Sep</text>
+          <text x="550" y="115" fill="#999" font-size="10" font-family="system-ui">Nov</text>
+            </svg>
+        </div>
+
+        <div class="trend-chart-box">
+            <div class="tch-title">Bearish trend - lower highs and lower lows</div>
+            <div class="tch-sub">Characteristic downward price progression consistently</div>
+            <svg viewBox="0 0 600 120" width="100%" height="110">
+                <line x1="0" y1="100" x2="600" y2="20" stroke="#e0e0e0" stroke-width="0.5"/>
+          <line x1="0" y1="50" x2="600" y2="50" stroke="#e0e0e0" stroke-width="0.5" stroke-dasharray="4"/>
+          <line x1="0" y1="70" x2="600" y2="70" stroke="#e0e0e0" stroke-width="0.5" stroke-dasharray="4"/>
+          <polyline points="0,18 60,30 120,22 180,42 240,38 300,55 360,50 420,68 480,62 540,80 600,88"
+            fill="none" stroke="#DB85A30" stroke-width="2.5" stroke-linejoin="round"/>
+
+            <!---resistance line--->
+            <line x1="0" y1="18" x2="600" y2="88" stroke="#D85A30" stroke-width="1" stroke-dasharray="6" opacity="0.5"/>
+          <text x="8" y="115" fill="#999" font-size="10" font-family="system-ui">Jan</text>
+          <text x="110" y="115" fill="#999" font-size="10" font-family="system-ui">Mar</text>
+          <text x="220" y="115" fill="#999" font-size="10" font-family="system-ui">May</text>
+          <text x="330" y="115" fill="#999" font-size="10" font-family="system-ui">Jul</text>
+          <text x="440" y="115" fill="#999" font-size="10" font-family="system-ui">Sep</text>
+          <text x="550" y="115" fill="#999" font-size="10" font-family="system-ui">Nov</text>
+            </svg>
+        </div>
+
+        <div class="trend-chart-box">
+            <div class="tch-title">Consolidating trend - sideways movement</div>
+            <div class="tch-sub">Characteristic price movement within a defined range</div>
+            <svg viewBox="0 0 600 120" width="100%" height="110">
+                <line x1="0" y1="100" x2="600" y2="100" stroke="#e0e0e0" stroke-width="0.5"/>
+                <!---resistance line--->
+          <line x1="0" y1="30" x2="600" y2="30" stroke="#BA7517" stroke-width="1" stroke-dasharray="6" opacity="0.5"/>
+          <!---support line--->
+          <line x1="0" y1="80" x2="600" y2="80" stroke="#BA7517" stroke-width="1" stroke-dasharray="6" opacity="0.5"/>
+          <text x1="0" y1="80" x2="600" y2="80" stroke="#BA7517" stroke-width="1" stroke-dasharray="6" opacity="0.6"/>
+          <text x="4" y="27" fill="#BA7517" font-size="9" font-family="system-ui">Resistance</text>
+          <text x="4" y="94" fill="#BA7517" font-size="9" font-family="system-ui">Support</text>
+          <polyline points="0,55 50,35 100,72 160,38 220,78 280,40 340,75 400,35 460,70 520,38 580,65 600,55"
+            fill="none" stroke="#BA7517" stroke-width="2.5" stroke-linejoin="round"/>
+          <text x="8" y="115" fill="#999" font-size="10" font-family="system-ui">Jan</text>
+          <text x="110" y="115" fill="#999" font-size="10" font-family="system-ui">Mar</text>
+          <text x="220" y="115" fill="#999" font-size="10" font-family="system-ui">May</text>
+          <text x="330" y="115" fill="#999" font-size="10" font-family="system-ui">Jul</text>
+          <text x="440" y="115" fill="#999" font-size="10" font-family="system-ui">Sep</text>
+          <text x="550" y="115" fill="#999" font-size="10" font-family="system-ui">Nov</text>
+            </svg>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <span>The Trading Dictionary</span>
+    <span>Disclaimer: For educational purposes only.</span>
+    <span>© 2025</span>
+    </footer>
+
+    </div>
+
+    <script>
+    const terms = [{term:"Arbitrage",cat:"Strategies",def:"Simultaneous purchase and sale of an asset in different markets to profit from price differences."},
+        {term:"Bull Market",cat:"Market Trends",def:"A market in which prices are rising or are expected to rise, encouraging buying."},
+    {term:"Bear Market",cat:"Market Trends",def:"A market experiencing prolonged price declines, typically 20% or more from recent highs."},
+        {term:"Candlestick",cat:"Technical Analysis",def:"A chart element showing the open, close, high, and low price of an asset in a given period."},
+    {term:"Divergence",cat:"Indicators",def:"When price moves in the opposite direction of a technical indicator, signalling a potential reversal."},
+    {term:"EMA",cat:"Technical Analysis",def:"Exponential Moving Average — gives more weight to recent prices than a simple moving average."},
+    {term:"Fibonacci Retracement",cat:"Technical Analysis",def:"Horizontal lines indicating possible support and resistance levels based on the Fibonacci sequence."},
+    {term:"Gap",cat:"Technical Analysis",def:"A break in continuity on a price chart where no trading occurred between two sessions."},
+    {term:"Hedging",cat:"Risk Management",def:"An investment made to reduce the risk of adverse price movements in an asset."},
+    {term:"IPO",cat:"Market Trends",def:"Initial Public Offering — the first sale of a company's shares to the public."},
+    {term:"Leverage",cat:"Risk Management",def:"Using borrowed capital to increase the potential return of an investment."},
+    {term:"Margin",cat:"Risk Management",def:"The collateral that an investor must deposit to cover the credit risk to a broker."},
+    {term:"Options",cat:"Derivatives",def:"Contracts giving the holder the right, but not obligation, to buy or sell an asset at a set price."},
+    {term:"Pivot Point",cat:"Technical Analysis",def:"A price level used to determine potential support and resistance in the market."},
+    {term:"RSI",cat:"Indicators",def:"Relative Strength Index — measures the magnitude of recent price changes to evaluate overbought or oversold conditions."},
+    {term:"Stop Loss",cat:"Risk Management",def:"An order placed to sell a security when it reaches a specific price, limiting potential loss."},
+    {term:"Volatility",cat:"Indicators",def:"A statistical measure of the dispersion of returns. High volatility means larger price swings."},
+        
+     ];
+     
+     let currentAlpha = null;
+     let currentCat = 'all';
+
+     function renderDict() {
+    const input = document.getElementById('dict-input');
+    if (!input) return;
+    const q = input.value.toLowerCase();
+    const grid = document.getElementById('dict-grid');
+    const filtered = terms.filter(t => {
+      const matchQ = !q || t.term.toLowerCase().includes(q) || t.def.toLowerCase().includes(q);
+      const matchA = !currentAlpha || t.term.toUpperCase().startsWith(currentAlpha);
+      const matchC = currentCat === 'all' || t.cat === currentCat;
+      return matchQ && matchA && matchC;
+    });
+    grid.innerHTML = filtered.length > 0
+      ? filtered.map(t => `
+          <div class="def-card">
+            <div class="cat-badge">${t.cat}</div>
+            <div class="term">${t.term}</div>
+            <div class="def-text">${t.def}</div>
+          </div>`).join('')
+      : '<p style="color:#999;font-size:13px;padding:8px">No terms found.</p>';
+  }
+
+  function filterDict() { renderDict(); }
+
+  function filterAlpha(l, el) {
+    document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+    if (currentAlpha === l) {
+      currentAlpha = null;
+    } else {
+      currentAlpha = l;
+      el.classList.add('active');
+    }
+    renderDict();
+  }
+
+  function filterCat(c, el) {
+    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    el.classList.add('active');
+    currentCat = c;
+    renderDict();
+  }
+  
+  // Initial render for dictionary page
+  window.onload = renderDict;
+</script>
+
+<button class="access-btn" onclick="toggleContrast()">🌓 High Contrast</button><script>
+function toggleContrast() {
+    document.body.classList.toggle('high-contrast');
+    const isHigh = document.body.classList.contains('high-contrast');
+    localStorage.setItem('high-contrast', isHigh);
+}
+
+// Check for preference on load
+window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('high-contrast') === 'true') {
+        document.body.classList.add('high-contrast');
+    }
+});
+</script>
+
+
+</body>
+</html>
