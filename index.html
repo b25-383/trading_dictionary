@@ -4,19 +4,36 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Trading Dictionary</title>
+
     </head>
     <body>
             <nav>
-    <span style="color:green">▲</span> The Trading <span class="accent">Dictionary</span>
-    <div>
-        <div class="nav-logo" onclick="window.location.href='index.html'"></div>
-        <button onclick="window.location.href='index.html'">Home</button>
-        <button onclick="window.location.href='dictionary.html'">Dictionary</button>
-        <button onclick="window.location.href='educationhub.html'">Education Hub</button>
-        <button onclick="window.location.href='trends.html'">Trends</button>
-        <button onclick="window.location.href='about.html'">About</button>
-        <button onclick="window.location.href='contact.html'">Contact</button>
+    <div class="logo">The Trading<br>Dictionary</div>
+    <div class="search-bar">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#888" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input placeholder="Search terms...">
     </div>
+    <div style="width:1px;height:20px;background:#e0e0e0"></div>
+    <div class="nav-links">
+      <a href="index.html"><button id="nav-home" class="active">Home</button></a>
+      <a href="dictionary.html"><button id="nav-dictionary">Dictionary</button></a>
+      <a href="educationhub.html"><button id="nav-education">Education Hub</button></a>
+      <a href="trends.html"><button id="nav-trends">Trends</button></a>
+      <a href="about.html"><button id="nav-about">About</button></a>
+      <a href="contact.html"><button id="nav-contact">Contact</button></a>
+    </div>
+  </nav>
+  <div class="page">
+    <div class="hero">
+        <h1>Your Edge Starts With <span>Understanding.</span></h1>
+        <p>Learn what others won't teach you.</p>
+         <div class="hero-btns">
+          <a href="dictionary.html"><button class="btn-primary">Browse Dictionary</button></a>
+        <a href="educationhub.html"><button class="btn-outline">Explore Hub</button></a>
+      </div>
+
+  </div>
+    
 </nav>
 <div class="page active" id="home">
     <div class="hero">
