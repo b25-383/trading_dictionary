@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Trading Dictionary</title>
-
+      <link rel="stylesheet" href="C:\Users\lvmog\OneDrive\Desktop\Assignment-2026\styles.css">
     </head>
     <body>
             <nav>
@@ -33,42 +33,134 @@
       </div>
 
   </div>
-    
-</nav>
-<div class="page active" id="home">
-    <div class="hero">
-        <h1>Your Edge Starts With <span>Understanding.</span></h1>
-        <p>Learn what others won't teach you.</p>
-         <div class="hero-ctas">
-      <button class="btn-primary" onclick="window.location.href='dictionary.html'">Browse Dictionary</button>
-      <button class="btn-outline" onclick="window.location.href='educationhub.html'">Explore hub</button>
+<div class="home-grid">
+  <div class="home-left">
+    <div class="section-label">Search on the dictionary</div>
+    <div class="dict-search" style="margin-bottom: 12px;">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#888" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input type="text" id="home-search" placeholder="Search terms A-Z from dictionary" oninput="filterDictionary(this.value)"/>
     </div>
+    <div style="display:flex;gap:4px;flex-wrap:wrap">
+      <span class="alpha-btn">A</span><span class="alpha-btn">B</span><span class="alpha-btn">C</span><span class="alpha-btn">D</span><span class="alpha-btn">E</span><span class="alpha-btn">F</span><span class="alpha-btn">G</span><span class="alpha-btn">H</span><span class="alpha-btn">I</span><span class="alpha-btn">J</span><span class="alpha-btn">L</span><span class="alpha-btn">M</span><span class="alpha-btn">N</span><span class="alpha-btn">P</span><span class="alpha-btn">R</span><span class="alpha-btn">S</span><span class="alpha-btn">T</span>
     </div>
-</div>
+  </div>
+
 <div class="home-right">
-        <div class="section-label"><span>Market snapshot</span><span class="view-all" onclick="window.location.href='trends.html'"> View more</span></div>
+          <div class="section-label"><span>Bullish trend</span><a href="trends.html" class="view-all"> View more»</a></div>
         <div class="chart-placeholder">
           <svg class="mini-chart" viewBox="0 0 300 80" preserveAspectRatio="none" height="80">
             <polyline points="0,60 30,50 60,55 90,35 120,40 150,25 180,30 210,20 240,28 270,15 300,18" fill="none" stroke="#1D9E75" stroke-width="2"/>
             <polyline points="0,60 30,50 60,55 90,35 120,40 150,25 180,30 210,20 240,28 270,15 300,18" fill="url(#gr)" stroke="none" opacity="0.15"/>
             <defs><linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1D9E75"/><stop offset="100%" stop-color="transparent"/></linearGradient></defs>
           </svg>
-          <span style="position:relative;z-index:1;font-weight:500;font-size:14px">Bullish Trend Chart</span>
         </div>
       </div>
-      <div class="wrap" style="margin-bottom:60px;">
-    <div class="section-hd"><div class="section-title">Featured Terms</div><button class="section-link" onclick="window.location.href='dictionary.html'">Full Dictionary →</button></div>
-    <div class="terms-grid">
-      <div class="card term-card" onclick="window.location.href='dictionary.html'"><div class="term-letter">R · Technical Analysis</div><div class="term-name">RSI — Relative Strength Index</div><div class="term-def">A momentum oscillator measuring speed and magnitude of price changes. Readings above 70 suggest overbought, below 30 oversold conditions.</div><span class="term-tag">Indicator</span></div>
-      <div class="card term-card" onclick="window.location.href='dictionary.html'"><div class="term-letter">P · Forex</div><div class="term-name">Pip</div><div class="term-def">The smallest standardised move in a currency pair. In most pairs, 1 pip = 0.0001. It's the base unit for measuring gains and losses in Forex.</div><span class="term-tag">Forex Basics</span></div>
-      <div class="card term-card" onclick="window.location.href='dictionary.html'"><div class="term-letter">M · Technical Analysis</div><div class="term-name">MACD</div><div class="term-def">Moving Average Convergence Divergence. A trend-following momentum indicator showing the relationship between two EMAs.</div><span class="term-tag">Indicator</span></div>
-      <div class="card term-card" onclick="window.location.href='dictionary.html'"><div class="term-letter">L · General</div><div class="term-name">Leverage</div><div class="term-def">Borrowed capital used to increase potential return. A 10:1 leverage means you control $10,000 with $1,000. Amplifies both gains and losses.</div><span class="term-tag">Risk Management</span></div>
-    </div>
+</div>
+<div style="padding: 20px 32px 24px;border: bottom 1px solid #e0e0e0">
+  <div class="section-label"><span>Featured terminology</span><a href="dictionary.html" class="view-all">Full dictionary»</a></div>
+  <div class="term-row">
+    <div class="term-card"><div class="tc-name">RSI</div><div class="tc-cat">Technical Analysis</div><div class="term-def">A momentum oscillator measuring speed and magnitude of price changes. Readings above 70 suggest overbought, below 30 oversold conditions.</div></div>
+    <div class="term-card"><div class="tc-name">Pip</div><div class="tc-cat">Forex</div><div class="term-def">The smallest standardised move in a currency pair. In most pairs, 1 pip = 0.0001. It's the base unit for measuring gains and losses in Forex.</div></div>
+     <div class="term-card"><div class="tc-name">MACD</div><div class="tc-cat">Technical Analysis</div><div class="term-def">Moving Average Convergence Divergence. A trend-following momentum indicator showing the relationship between two EMAs.</div></div>
+      <div class="term-card"><div class="tc-name">Leverage</div><div class="tc-cat">General</div><div class="term-def">Borrowed capital used to increase potential return. A 10:1 leverage means you control $10,000 with $1,000. Amplifies both gains and losses.</div></div>
+
+
   </div>
+</div>
+  </div>
+     <footer>
+      <span>The Trading Dictionary</span>
+      <span>Disclaimer: For educational purposes only.</span>
+      <span>© 2026</span></span>
+     </footer>
+    </div>
+<script>
+  const terms = [
+    {term:"Bull Market",cat:"Market Trends",def:"A market in which prices are rising or are expected to rise, encouraging buying."},
+    {term:"Bear Market",cat:"Market Trends",def:"A market experiencing prolonged price declines, typically 20% or more from recent highs."},
+    {term:"Arbitrage",cat:"Strategies",def:"Simultaneous purchase and sale of an asset in different markets to profit from price differences."},
+    {term:"Candlestick",cat:"Technical Analysis",def:"A chart element showing the open, close, high, and low price of an asset in a given period."},
+    {term:"Divergence",cat:"Indicators",def:"When price moves in the opposite direction of a technical indicator, signalling a potential reversal."},
+    {term:"EMA",cat:"Technical Analysis",def:"Exponential Moving Average — gives more weight to recent prices than a simple moving average."},
+    {term:"Fibonacci Retracement",cat:"Technical Analysis",def:"Horizontal lines indicating possible support and resistance levels based on the Fibonacci sequence."},
+    {term:"Gap",cat:"Technical Analysis",def:"A break in continuity on a price chart where no trading occurred between two sessions."},
+    {term:"Hedging",cat:"Risk Management",def:"An investment made to reduce the risk of adverse price movements in an asset."},
+    {term:"IPO",cat:"Market Trends",def:"Initial Public Offering — the first sale of a company's shares to the public."},
+    {term:"Leverage",cat:"Risk Management",def:"Using borrowed capital to increase the potential return of an investment."},
+    {term:"Margin",cat:"Risk Management",def:"The collateral that an investor must deposit to cover the credit risk to a broker."},
+    {term:"Options",cat:"Derivatives",def:"Contracts giving the holder the right, but not obligation, to buy or sell an asset at a set price."},
+    {term:"Pivot Point",cat:"Technical Analysis",def:"A price level used to determine potential support and resistance in the market."},
+    {term:"RSI",cat:"Indicators",def:"Relative Strength Index — measures the magnitude of recent price changes to evaluate overbought or oversold conditions."},
+    {term:"Stop Loss",cat:"Risk Management",def:"An order placed to sell a security when it reaches a specific price, limiting potential loss."},
+    {term:"Volatility",cat:"Indicators",def:"A statistical measure of the dispersion of returns. High volatility means larger price swings."},
+  ];
+
+  let currentAlpha = null;
+  let currentCat = 'all';
+
+  function renderDict() {
+    const input = document.getElementById('dict-input');
+    if (!input) return;
+    const q = input.value.toLowerCase();
+    const grid = document.getElementById('dict-grid');
+    const filtered = terms.filter(t => {
+      const matchQ = !q || t.term.toLowerCase().includes(q) || t.def.toLowerCase().includes(q);
+      const matchA = !currentAlpha || t.term.toUpperCase().startsWith(currentAlpha);
+      const matchC = currentCat === 'all' || t.cat === currentCat;
+      return matchQ && matchA && matchC;
+    });
+    grid.innerHTML = filtered.length > 0
+      ? filtered.map(t => `
+          <div class="def-card">
+            <div class="cat-badge">${t.cat}</div>
+            <div class="term">${t.term}</div>
+            <div class="def-text">${t.def}</div>
+          </div>`).join('')
+      : '<p style="color:#999;font-size:13px;padding:8px">No terms found.</p>';
+  }
+
+  function filterDict() { renderDict(); }
+
+  function filterAlpha(l, el) {
+    document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+    if (currentAlpha === l) {
+      currentAlpha = null;
+    } else {
+      currentAlpha = l;
+      el.classList.add('active');
+    }
+    renderDict();
+  }
+
+  function filterCat(c, el) {
+    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    el.classList.add('active');
+    currentCat = c;
+    renderDict();
+  }
+  
+  // Initial render for dictionary page
+  window.onload = renderDict;
+</script>
+
+<button class="access-btn" onclick="toggleContrast()">🌓 High Contrast</button><script>
+function toggleContrast() {
+    document.body.classList.toggle('high-contrast');
+    const isHigh = document.body.classList.contains('high-contrast');
+    localStorage.setItem('high-contrast', isHigh);
+}
+
+// Check for preference on load
+window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('high-contrast') === 'true') {
+        document.body.classList.add('high-contrast');
+    }
+});
+</script>
 </body>
 
-<footer><div class="footer-logo">The Trading <span>Dictionary</span></div><div class="footer-note">© 2025 The Trading Dictionary · All rights reserved</div><div class="footer-copy">Not financial advice</div></footer>
-</div>
+
+
 
     
 </html>

@@ -1,0 +1,710 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f5f3;
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+
+.site {
+    max-width: 1200px;
+    margin: 1rem auto 2rem auto;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 16px;
+    background: #fff;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    min-width: 100px;
+    padding: 4px 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f5f5f3;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 6px 10px;
+    flex: 0 0 180px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    color: #1a1a1a;
+    width: 140px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+.nav-links button {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.15s;
+}
+
+.nav-links button:hover, 
+.nav-links button.active {
+    background: #f5f5f3;
+    color: #1a1a1a;
+    border-color: #e0e0e0;
+}
+
+/* PAGE WRAPPERS */
+.page {
+    display: block;
+}
+
+/* HERO SECTION */
+.hero {
+    background: #f0f0ee;
+    padding: 32px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #1a1a1a;
+    border: 1px solid #ccc;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* GRID LAYOUTS */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.home-left {
+    padding: 24px 32px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.home-right {
+    padding: 24px 32px;
+}
+
+.section-label {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.view-all {
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+    text-decoration: underline;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* DICTIONARY STYLES */
+.dict-header {
+    background: #f0f0ee;
+    padding: 24px 32px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dict-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.dict-header p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.dict-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.dict-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    color: #1a1a1a;
+    width: 100%;
+}
+
+.alpha-row {
+    display: flex;
+    gap: 4px;
+    padding: 12px 32px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    background: #fff;
+}
+
+.alpha-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    background: #f5f5f3;
+    border: 1px solid #e0e0e0;
+    color: #666;
+    transition: all 0.15s;
+}
+
+.alpha-btn:hover,
+.alpha-btn.active {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+}
+
+.cat-filter {
+    display: flex;
+    gap: 6px;
+    padding: 10px 32px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+}
+
+.cat-pill {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    background: #f5f5f3;
+    border: 1px solid #e0e0e0;
+    color: #666;
+    transition: all 0.15s;
+}
+
+.cat-pill:hover,
+.cat-pill.active {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.dict-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 20px 32px;
+}
+
+.def-card {
+    background: #f5f5f3;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: border-color 0.15s;
+}
+
+.def-card:hover {
+    border-color: #aaa;
+}
+
+.def-card .term {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.def-card .cat-badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.def-card .def-text {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* EDUCATION HUB STYLES */
+.edu-header {
+    background: #f0f0ee;
+    padding: 24px 32px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.edu-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.edu-header p {
+    font-size: 13px;
+    color: #666;
+}
+
+.indicator-chart {
+    background: #f5f5f3;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.chart-area {
+    flex: 1;
+    height: 80px;
+    position: relative;
+}
+
+.ind-name {
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.ind-desc {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+    min-width: 120px;
+}
+
+.edu-desc-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 0 32px 20px;
+}
+
+.edu-desc-card {
+    background: #f5f5f3;
+    border-radius: 8px;
+    padding: 12px 14px;
+    border: 1px solid #e0e0e0;
+}
+
+.edu-desc-card .ed-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.edu-desc-card .ed-body {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* MARKET TRENDS STYLES */
+.trends-header {
+    background: #f0f0ee;
+    padding: 24px 32px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.trends-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.trends-header p {
+    font-size: 13px;
+    color: #666;
+}
+
+.trend-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 24px 32px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.trend-card {
+    background: #f5f5f3;
+    border-radius: 10px;
+    padding: 18px;
+    border: 1px solid #e0e0e0;
+}
+
+.trend-card .tc-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.trend-card .tc-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.trend-card .tc-body {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.trend-bullish .tc-label { color: #0f6e56; }
+.trend-bearish .tc-label { color: #993c1d; }
+.trend-consolidating .tc-label { color: #854f0b; }
+
+.trend-chart-section {
+    padding: 24px 32px;
+}
+
+.trend-chart-box {
+    background: #f5f5f3;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 16px;
+}
+
+.trend-chart-box .tch-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.trend-chart-box .tch-sub {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+/* CONTACT PAGE STYLES */
+.contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-info {
+    padding: 32px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.contact-info h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.contact-info p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #666;
+}
+
+.info-icon {
+    width: 32px;
+    height: 32px;
+    background: #f5f5f3;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+
+.contact-form {
+    padding: 32px;
+}
+
+.contact-form h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    background: #f5f5f3;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 13px;
+    color: #1a1a1a;
+    outline: none;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 80px;
+    resize: none;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+/* ABOUT PAGE STYLES */
+.about-header {
+    background: #f0f0ee;
+    padding: 24px 32px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.about-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.about-header p {
+    font-size: 13px;
+    color: #666;
+}
+
+/* COMMON ELEMENTS */
+.chart-placeholder {
+    background: #f5f5f3;
+    border-radius: 10px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #999;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    overflow: hidden;
+}
+
+.term-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.term-card {
+    background: #f5f5f3;
+    border-radius: 8px;
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+footer {
+    padding: 14px 32px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #999;
+    background: #f5f5f3;
+}
+
+/* HIGH CONTRAST MODE */
+body.high-contrast {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+body.high-contrast .site {
+    background: #000 !important;
+    border: 2px solid #fff !important;
+}
+
+body.high-contrast nav,
+body.high-contrast footer,
+body.high-contrast .hero,
+body.high-contrast .dict-header,
+body.high-contrast .edu-header,
+body.high-contrast .trends-header,
+body.high-contrast .about-header {
+    background: #000 !important;
+    border-color: #fff !important;
+}
+
+body.high-contrast p,
+body.high-contrast span,
+body.high-contrast div,
+body.high-contrast .ind-desc,
+body.high-contrast .ed-body,
+body.high-contrast .tc-body,
+body.high-contrast .tch-sub {
+    color: #fff !important;
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast .term,
+body.high-contrast .ind-name,
+body.high-contrast .tc-title {
+    color: #00ff00 !important; /* Bright green for headings in contrast mode */
+}
+
+body.high-contrast .btn-primary {
+    background: #fff !important;
+    color: #000 !important;
+    border: 2px solid #fff !important;
+}
+
+body.high-contrast .btn-outline,
+body.high-contrast .nav-links button,
+body.high-contrast .alpha-btn,
+body.high-contrast .cat-pill,
+body.high-contrast .term-card,
+body.high-contrast .def-card,
+body.high-contrast .indicator-chart,
+body.high-contrast .edu-desc-card,
+body.high-contrast .trend-card,
+body.high-contrast .trend-chart-box {
+    background: #000 !important;
+    border: 1.5px solid #fff !important;
+    color: #fff !important;
+}
+
+body.high-contrast .nav-links button.active,
+body.high-contrast .alpha-btn.active,
+body.high-contrast .cat-pill.active {
+    background: #fff !important;
+    color: #000 !important;
+}
+
+/* Float Accessibility Button */
+.access-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #1a1a1a;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
