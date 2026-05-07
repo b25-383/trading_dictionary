@@ -4,14 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Trading Dictionary</title>
-      <link rel="stylesheet" href="C:\Users\lvmog\OneDrive\Desktop\Assignment-2026\styles.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
             <nav>
-    <div class="logo">The Trading<br>Dictionary</div>
+    <a href="index.html" class="logo-link">      
+        <div class="logo" text-decoration="none" color="inherit" cursor="pointer">The Trading<br>Dictionary</div>
+    </a>
     <div class="search-bar">
       <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#888" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg>
-      <input placeholder="Search terms...">
+      <input type="text" placeholder="Search terms..." onkeydown="if(event.key==='enter') goToSearch()" id="home-search"/>
+      <button onclick="goToSearch()">⇥</button>
+
     </div>
     <div style="width:1px;height:20px;background:#e0e0e0"></div>
     <div class="nav-links">
@@ -36,9 +40,11 @@
 <div class="home-grid">
   <div class="home-left">
     <div class="section-label">Search on the dictionary</div>
+        
     <div class="dict-search" style="margin-bottom: 12px;">
       <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#888" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg>
-      <input type="text" id="home-search" placeholder="Search terms A-Z from dictionary" oninput="filterDictionary(this.value)"/>
+      <input type="text" id="home-search" placeholder="Search terms A-Z from dictionary" onkeydown="if(event.key==='enter') goToSearch()"/>
+      <button onclick="goToSearch()">Search</button>
     </div>
     <div style="display:flex;gap:4px;flex-wrap:wrap">
       <span class="alpha-btn">A</span><span class="alpha-btn">B</span><span class="alpha-btn">C</span><span class="alpha-btn">D</span><span class="alpha-btn">E</span><span class="alpha-btn">F</span><span class="alpha-btn">G</span><span class="alpha-btn">H</span><span class="alpha-btn">I</span><span class="alpha-btn">J</span><span class="alpha-btn">L</span><span class="alpha-btn">M</span><span class="alpha-btn">N</span><span class="alpha-btn">P</span><span class="alpha-btn">R</span><span class="alpha-btn">S</span><span class="alpha-btn">T</span>
@@ -71,7 +77,7 @@
      <footer>
       <span>The Trading Dictionary</span>
       <span>Disclaimer: For educational purposes only.</span>
-      <span>© 2026</span></span>
+      <span>© 2026</span>
      </footer>
     </div>
 <script>
@@ -138,7 +144,11 @@
     currentCat = c;
     renderDict();
   }
-  
+  function goToSearch() {
+    const q = document.getElementById('home-search').value.trim();
+    if (q) {
+      window.location.href = 'dictionary.html?q=' + encodeURIComponent(q); } else { window.location.href = 'dictionary.html'; }
+    } 
   // Initial render for dictionary page
   window.onload = renderDict;
 </script>

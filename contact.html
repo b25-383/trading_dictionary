@@ -9,10 +9,13 @@
 <body>
     <div class="site">
         <nav>
-            <div class="logo">The Trading<br>Dictionary</div>
+            <a href="index.html" class="logo-link">
+              <div class="logo" text-decoration="none" color="inherit" cursor="pointer">The Trading<br>Dictionary</div>
+            </a>
             <div class="search-bar">
                 <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#888" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg>
-                <input placeholder="Search terms...">
+                <input placeholder="Search terms..."  onkeydown="if(event.key==='enter') goToSearch()" id="home-search"/>
+        <button onclick="goToSearch()">⇥</button>
             </div>
             <div style="width:1px;height:20px;background:#e0e0e0"></div>
             <div class="nav-links">
